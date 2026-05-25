@@ -48,10 +48,10 @@ spec:
             - name: config-volume
               mountPath: /etc/prometheus
             - name: prometheus-storage
-              mountPath: /prometheus
+              mountPath: /var/lib/prometheus
           args:
             - "--config.file=/etc/prometheus/prometheus.yml"
-            - "--storage.tsdb.path=/prometheus/"
+            - "--storage.tsdb.path=/var/lib/prometheus"
             - "--storage.tsdb.retention.time=14d"
       volumes:
         - name: config-volume
