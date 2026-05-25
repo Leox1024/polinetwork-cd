@@ -71,7 +71,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: grafana
+  name: grafana-service
+  labels:
+    app: grafana
 spec:
   ports:
     - port: 3000
@@ -79,5 +81,3 @@ spec:
       targetPort: http-grafana
   selector:
     app: grafana
-  sessionAffinity: None
-  type: LoadBalancer
