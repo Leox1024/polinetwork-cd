@@ -40,4 +40,4 @@ spec:
             - name: PUBLIC_URL
               value: "https://beta.polinetwork.org"
             - name: BACKEND_URL
-              value: "https://api.polinetwork.org"
+              value: "http://backend-service.backend.svc.cluster.local:3000"
